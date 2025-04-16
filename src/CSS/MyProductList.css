@@ -1,0 +1,150 @@
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 8rem; 
+}
+
+
+.productCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.productTitle {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.productPrice {
+  align-self: flex-start;
+  margin-top: auto;
+  font-weight: bold;
+  color: black;
+}
+
+.addToCartButton {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 480px) {
+  .productList {
+    grid-template-columns: 1fr;
+  }
+
+  .productCard {
+    padding: 0.5rem;
+  }
+
+  .productTitle {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+  }
+
+  .addToCartButton {
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .productList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .productList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .productCard {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productCard {
+    max-width: 200px;
+    margin-top: 20px;
+  }
+}
+
+.productCard + button {
+  width: 300px;
+  padding: 10px 16px;
+  font-size: 1.1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.productCard + button:hover {
+  background-color: #0056b3;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-size: 3rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.productTitle {
+  font-family: "Montez", cursive;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
+  overflow: visible;
+  text-overflow: clip; 
+  white-space: normal; 
+}
+
+.productImage {
+  width: 75%;
+  height: 200px;
+  padding-top: 5rem;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.productPrice {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.addToCartButton {
+  margin-top: 8px;
+}
+
+.noProducts {
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  height: 100vh;
+  width: 100vw; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}

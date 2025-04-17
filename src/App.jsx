@@ -63,13 +63,13 @@ const AppContent = ({ searchTerm }) => {
     <Box
       component="main"
       sx={{
-        mt: { xs: '8rem', sm: '10rem' },
-        width: '100%',
+        mt: { xs: "8rem", sm: "10rem" },
+        width: "100%",
         flexGrow: 1,
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center',
-        justifyContent: 'center'
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <Routes>

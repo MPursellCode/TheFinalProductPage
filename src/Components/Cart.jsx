@@ -35,10 +35,7 @@ const Cart = () => {
         <Typography variant="h4" className="cart-title">
           Shopping Cart
         </Typography>
-        <Typography
-          variant="h6"
-          className="cart-empty"
-        >
+        <Typography variant="h6" className="cart-empty">
           Your cart is currently empty.
         </Typography>
       </Box>
@@ -47,7 +44,7 @@ const Cart = () => {
 
   const removeItem = (itemToRemove) => {
     setCart((prevCart) =>
-      prevCart.filter((item) => item.id !== itemToRemove.id)
+      prevCart.filter((item) => item.id !== itemToRemove.id),
     );
   };
 

@@ -32,8 +32,9 @@ const ProductList = ({ searchTerm }) => {
       console.warn("Skipping product with invalid or missing title:", product);
       return false;
     }
- 
-    const searchTermLower = typeof searchTerm === 'string' ? searchTerm.toLowerCase() : '';
+
+    const searchTermLower =
+      typeof searchTerm === "string" ? searchTerm.toLowerCase() : "";
     return product.title.toLowerCase().includes(searchTermLower);
   });
 

@@ -1,43 +1,38 @@
 .cart-container {
   color: black;
-  font-family: "Montez", cursive;
-  padding: 1rem; 
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
- 
-  width: 100%; 
+  width: 100%;
   max-width: 900px;
-  margin: 0 auto; 
- 
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
 .cart-title {
   margin-bottom: 20px;
   font-size: clamp(3rem, 8vw, 7rem);
- 
   text-align: center;
 }
 
 .cart-empty {
   text-align: center;
   margin-top: 20px;
-  font-size: clamp(1.5rem, 4vw, 2.5rem); 
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .cart-list {
   list-style: none;
   padding: 0;
-  width: 100%; 
+  width: 100%;
 }
-
 
 .cart-item {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   align-items: center;
-  padding: 10px 0; 
+  padding: 10px 0;
   border-bottom: 1px solid #ccc;
   gap: 10px;
 }
@@ -53,7 +48,7 @@
 }
 
 .cart-item-primary {
-  font-size: clamp(1.5rem, 4vw, 2.5rem); 
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   word-break: break-word;
 }
 
@@ -61,27 +56,26 @@
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
-.cart-item-actions { 
+.cart-item-actions {
   display: flex;
   align-items: center;
-  margin-left: auto; 
+  margin-left: auto;
 }
 
 .cart-summary {
   margin-top: 20px;
-  font-size: clamp(1.2rem, 3.5vw, 1.8rem); 
-  text-align: right; 
-  width: 100%; 
+  font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+  text-align: right;
+  width: 100%;
 }
-
 
 @media (max-width: 480px) {
   .cart-item {
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
   }
   .cart-item-actions {
-    margin-left: 0; 
+    margin-left: 0;
     margin-top: 10px;
     width: 100%;
     justify-content: space-between;

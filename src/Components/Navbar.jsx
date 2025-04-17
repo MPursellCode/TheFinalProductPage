@@ -69,7 +69,10 @@ const NavBar = ({ setSearchTerm }) => {
           >
             <MenuIcon />
           </IconButton>
-          <div style={{ display: { xs: "none", md: "flex" } }} sx={{ marginRight: '2rem' }}>
+          <div
+            style={{ display: { xs: "none", md: "flex" } }}
+            sx={{ marginRight: "2rem" }}
+          >
             <Button
               color="inherit"
               component={Link}
@@ -105,7 +108,7 @@ const NavBar = ({ setSearchTerm }) => {
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         PaperProps={{
-          sx: { padding: '1rem', width: '250px' }
+          sx: { padding: "1rem", width: "250px" },
         }}
       >
         <List>

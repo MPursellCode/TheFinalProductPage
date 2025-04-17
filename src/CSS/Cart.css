@@ -1,110 +1,92 @@
 .cart-container {
   color: black;
   font-family: "Montez", cursive;
-  padding: 20px;
+  padding: 1rem; 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding-top: 4rem;
+ 
+  width: 100%; 
+  max-width: 900px;
+  margin: 0 auto; 
+ 
+  box-sizing: border-box;
 }
 
 .cart-title {
   margin-bottom: 20px;
-  font-size: 7rem;
-  margin-top: 100px;
+  font-size: clamp(3rem, 8vw, 7rem);
+ 
   text-align: center;
 }
 
 .cart-empty {
   text-align: center;
   margin-top: 20px;
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); 
 }
 
 .cart-list {
   list-style: none;
   padding: 0;
+  width: 100%; 
 }
 
-p.MuiTypography-root.MuiTypography-body1.css-18-MuiTypography-root {
-  text-align: center;
-  margin-top: 80px;
-}
 
 .cart-item {
   display: flex;
+  flex-wrap: wrap; 
   align-items: center;
-  padding: 10px;
+  padding: 10px 0; 
   border-bottom: 1px solid #ccc;
+  gap: 10px;
 }
 
 .cart-item-avatar {
   margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .cart-item-text {
   flex-grow: 1;
+  min-width: 150px;
 }
 
 .cart-item-primary {
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); 
+  word-break: break-word;
 }
 
 .cart-item-secondary {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.cart-item-actions { 
+  display: flex;
+  align-items: center;
+  margin-left: auto; 
 }
 
 .cart-summary {
   margin-top: 20px;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3.5vw, 1.8rem); 
+  text-align: right; 
+  width: 100%; 
 }
 
-@media (max-width: 768px) {
-  .cart-title {
-    font-size: 4rem;
-    margin-top: 50px;
-  }
-
-  .cart-empty {
-    font-size: 3rem;
-  }
-
-  .cart-item-primary {
-    font-size: 2.5rem;
-  }
-
-  .cart-item-secondary {
-    font-size: 2rem;
-  }
-
-  .cart-summary {
-    font-size: 1.2rem;
-  }
-}
 
 @media (max-width: 480px) {
-  .cart-title {
-    font-size: 3rem;
-    margin-top: 30px;
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start; 
   }
-
-  .cart-empty {
-    font-size: 2rem;
+  .cart-item-actions {
+    margin-left: 0; 
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
   }
-
-  .cart-item-primary {
-    font-size: 2rem;
-  }
-
-  .cart-item-secondary {
-    font-size: 1.5rem;
-  }
-
   .cart-summary {
-    font-size: 1rem;
+    text-align: center;
   }
 }

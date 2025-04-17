@@ -15,6 +15,10 @@ export const ProductProvider = ({ children }) => {
         }
         const data = await response.json();
         setProducts(data);
+        console.log("Fetched products from API:", data);
+        if (!Array.isArray(data)) {
+          console.error("API response is not an array:", data);
+        }
       } catch (error) {
         console.error("Failed to fetch products:", error);
       } finally {
@@ -23,6 +27,9 @@ export const ProductProvider = ({ children }) => {
     };
     fetchProducts();
   }, []);
+
+  console.log("Products in context:", products);
+  console.log("Loading state:", loading);
 
   return (
     <ProductContext.Provider value={{ products, loading }}>

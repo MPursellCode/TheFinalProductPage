@@ -38,7 +38,6 @@ const Cart = () => {
         <Typography
           variant="h6"
           className="cart-empty"
-          style={{ fontSize: "1.5rem" }}
         >
           Your cart is currently empty.
         </Typography>

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ProductContext } from "../../ProductContext";
+import { ProductContext } from "../context/ProductContext";
 import { Card, CardContent, Typography, Button } from "@mui/material";
 import "../CSS/ProductList.css";
 import { CartContext } from "../context/CartContext";
@@ -20,9 +20,28 @@ const ProductList = ({ searchTerm }) => {
     return <div>Error: {error}</div>;
   }
 
-  const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  console.log("Raw products array:", products);
+
+  if (!Array.isArray(products)) {
+    console.error("Products is not an array:", products);
+    return <div>Error: Products data is invalid.</div>;
+  }
+
+  const filteredProducts = products.filter((product) => {
+    if (!product || typeof product.title !== "string") {
+      console.warn("Skipping product with invalid or missing title:", product);
+      return false;
+    }
+ 
+    const searchTermLower = typeof searchTerm === 'string' ? searchTerm.toLowerCase() : '';
+    return product.title.toLowerCase().includes(searchTermLower);
+  });
+
+  if (!products || products.length === 0) {
+    return <div>No products available.</div>;
+  }
+
+  console.log("Filtered products:", filteredProducts);
 
   if (!filteredProducts.length) {
     return (

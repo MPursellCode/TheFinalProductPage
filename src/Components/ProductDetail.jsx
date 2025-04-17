@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { Typography, CircularProgress, Box, Button } from "@mui/material";
 import { CartContext } from "../context/CartContext";
-import { getProductDetail } from "../assets/myApis";
+import { getProductDetail } from "../assets/Apis";
 
 const ProductDetail = () => {
   const { id } = useParams();

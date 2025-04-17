@@ -69,7 +69,7 @@ const NavBar = ({ setSearchTerm }) => {
           >
             <MenuIcon />
           </IconButton>
-          <div style={{ display: { xs: "none", md: "flex" } }}>
+          <div style={{ display: { xs: "none", md: "flex" } }} sx={{ marginRight: '2rem' }}>
             <Button
               color="inherit"
               component={Link}
@@ -104,6 +104,9 @@ const NavBar = ({ setSearchTerm }) => {
         anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
+        PaperProps={{
+          sx: { padding: '1rem', width: '250px' }
+        }}
       >
         <List>
           <ListItem
@@ -112,7 +115,7 @@ const NavBar = ({ setSearchTerm }) => {
             to="/"
             onClick={() => setDrawerOpen(false)}
           >
-            <ListItemText primary="Home" />
+            <ListItemText primary="Home" sx={{ pr: 2 }} />
           </ListItem>
           <ListItem
             button
@@ -120,7 +123,7 @@ const NavBar = ({ setSearchTerm }) => {
             to="/products"
             onClick={() => setDrawerOpen(false)}
           >
-            <ListItemText primary="Products" />
+            <ListItemText primary="Products" sx={{ pr: 2 }} />
           </ListItem>
           <ListItem
             button
@@ -128,7 +131,7 @@ const NavBar = ({ setSearchTerm }) => {
             to="/cart"
             onClick={() => setDrawerOpen(false)}
           >
-            <ListItemText primary="Cart" />
+            <ListItemText primary="Cart" sx={{ pr: 2 }} />
           </ListItem>
         </List>
       </Drawer>

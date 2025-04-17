@@ -1,8 +1,7 @@
 .product-detail-container {
   display: flex;
   flex-direction: column;
-  
-  font-family: 'Montez', cursive;
+  font-family: "Montez", cursive;
   text-align: center;
   align-items: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -12,16 +11,19 @@
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   width: 100%;
   max-width: 800px;
-  min-height: 100vh !important; 
   box-sizing: border-box;
-  padding-top: 4rem; 
   padding: 1rem;
   margin: 0 auto;
+  margin-top: 4rem;
+  position: relative;
+  padding-bottom: 5rem;
+  min-height: 600px;
 }
 
 .product-detail-image {
-  width: 25% !important;
-  height: 25% !important;
+  max-width: 80%;
+  width: 300px;
+  height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -30,84 +32,69 @@
 }
 
 .product-detail-title {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  margin-top: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .product-detail-description {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.product-detail-price {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.product-detail-buttons {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-detail-buttons > button:first-child {
+  margin-right: 1rem;
+
+  .product-detail-buttons > button:last-child {
+    margin-left: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
   .product-detail-container {
-    font-size: 1.8rem;
-    width: 100% !important; 
-    margin: 0 !important; 
-    padding: 0.5rem;
+    padding: 0.8rem;
+    padding-bottom: 6rem;
+    min-height: 500px;
   }
-
-  .product-detail-image {
-    width: 35% !important;
-    height: 35% !important;
-    display: block;
-    object-fit: contain;
-  }
-
-  .product-detail-title {
-    font-size: clamp(1.2rem, 2.5vw, 2rem);
-  }
-
-  .product-detail-description {
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
-  }
-}
-
-@media (max-width: 600px) {
-  .product-detail-container {
-    font-size: 1rem;
-    width: 100% !important; 
-    margin: 0 !important; 
-    padding: 0.5rem;
-  }
-
-  .product-detail-image {
-    width: 70% !important;
-    height: auto !important;
-    display: block;
-    object-fit: contain;
-  }
-
-  .product-detail-title {
-    font-size: 2rem;
-    margin-top: 5rem;
-  }
-
-  .product-detail-description {
-    font-size: 1.5rem;
+  .product-detail-buttons {
+    bottom: 0.8rem;
+    left: 0.8rem;
+    right: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .product-detail-container {
-    font-size: 0.8rem;
-    width: 100% !important; 
-    margin: 0 !important; 
     padding: 0.5rem;
+    padding-bottom: 5rem;
+    min-height: 400px;
   }
-
-  .product-detail-image {
-    width: 80% !important;
-    height: auto !important;
-    display: block;
-    object-fit: contain;
+  .product-detail-buttons {
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
   }
-
   .product-detail-title {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    margin-top: 3rem;
+    font-size: clamp(1.2rem, 5vw, 2rem);
   }
-
   .product-detail-description {
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+  }
+  .product-detail-price {
+    font-size: clamp(1rem, 3.5vw, 1.8rem);
   }
 }
